@@ -21,10 +21,7 @@ echo ""
 echo "Do you want to install all needed updates and firewall settings (no if you did it before)? [y/n]"
 read DOSETUP
 	if [[ $DOSETUP =~ "y" ]] || [[$DOSETUP =~ "Y" ]] ; then
-	sudo apt-get update
-	sudo apt-get -y upgrade
-	sudo apt-get -y dist-upgrade
-	
+	apt-get update;apt-get upgrade -y;apt-get dist-upgrade -y;apt-get install nano htop git -y;apt-get install build-essential libtool autotools-dev automake pkg-config -y;apt-get install libssl-dev libevent-dev bsdmainutils software-properties-common -y;apt-get install libboost-all-dev -y;apt-get install libzmq3-dev libminiupnpc-dev libssl-dev libevent-dev -y;add-apt-repository ppa:bitcoin/bitcoin -y;apt-get update;apt-get install libdb4.8-dev libdb4.8++-dev -y;
 	sudo apt-get install -y ufw
 	sudo ufw allow ssh/tcp
 	sudo ufw limit ssh/tcp
@@ -48,7 +45,7 @@ read IPDEFAULT
 	echo "We are using your default IP address"
 	echo "Enter masternode private key for node, followed by [ENTER]: $ALIAS"
 	read PRIVKEY
-	CONF_DIR=~/.desire\/
+	CONF_DIR=~/.desirecore\/
 	CONF_FILE=desire.conf
 	PORT=9919
 	IP=$(hostname -I)
@@ -81,7 +78,7 @@ else
 	echo ""
 	echo "Enter masternode private key for node, followed by [ENTER]: $ALIAS"
 	read PRIVKEY
-	CONF_DIR=~/.desire\/
+	CONF_DIR=~/.desirecore\/
 	CONF_FILE=desire.conf
 	PORT=9919
 	mkdir -p $CONF_DIR
