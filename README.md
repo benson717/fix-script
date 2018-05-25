@@ -2,17 +2,15 @@
   <img src="https://i.imgur.com/s7rXj0A.png" width="100"/>
 </p>
 
-# <h>  VPS Masternode Setup script. </h>
+# <h>  Desire VPS Masternode Setup script. </h>
 
 To run the script simply type the following commands into your VPS terminal. 
  
-- wget https://github.com/lazyboozer/masternode_script/archive/v.1.0.0.tar.gz
+- wget https://github.com/lazyboozer/masternode_script/releases/download/v.1.0.0/DSRMNINSTALL.tar.gz
 
-- tar -xvzf v.1.0.0.tar.gz
+- tar -xvzf DSRMNINSTALL.tar.gz
 
-- chmod 755 masternode_script-v.1.0.0/Desire_Setup.sh
-
-- cd masternode_script-v.1.0.0
+- chmod 755 Desire_Setup.sh
 
 - ./Desire_Setup.sh
 
