@@ -50,20 +50,20 @@ read IPDEFAULT
 	PORT=9919
 	IP=$(hostname -I)
 	mkdir -p $CONF_DIR
-	echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
-	echo "rpcpassword=passw"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
-	echo "rpcallowip=127.0.0.1" >> $CONF_DIR/$CONF_FILE
-	echo "listen=1" >> $CONF_DIR/$CONF_FILE
-	echo "server=1" >> $CONF_DIR/$CONF_FILE
-	echo "daemon=1" >> $CONF_DIR/$CONF_FILE
-	echo "logtimestamps=1" >> $CONF_DIR/$CONF_FILE
-	echo "maxconnections=256" >> $CONF_DIR/$CONF_FILE
-	echo "masternode=1" >> $CONF_DIR/$CONF_FILE
+	echo "rpcuser=user\n"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
+	echo "rpcpassword=passw\n"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
+	echo "rpcallowip=127.0.0.1\n" >> $CONF_DIR/$CONF_FILE
+	echo "listen=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "server=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "daemon=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "logtimestamps=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "maxconnections=256\n" >> $CONF_DIR/$CONF_FILE
+	echo "masternode=1\n" >> $CONF_DIR/$CONF_FILE
 	echo "" >> $CONF_DIR/$CONF_FILE
 	echo "" >> $CONF_DIR/$CONF_FILE
-	echo "port=$PORT" >> $CONF_DIR/$CONF_FILE
-	echo "masternodeaddr=$IP:$PORT" >> $CONF_DIR/$CONF_FILE
-	echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
+	echo "port=$PORT\n" >> $CONF_DIR/$CONF_FILE
+	echo "masternodeaddr=$IP:$PORT\n" >> $CONF_DIR/$CONF_FILE
+	echo "masternodeprivkey=$PRIVKEY\n" >> $CONF_DIR/$CONF_FILE
 	./desired -daemon
 	echo "if server start failure try ./desired -reindex"
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -84,18 +84,18 @@ else
 	mkdir -p $CONF_DIR
 	echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
 	echo "rpcpassword=passw"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
-	echo "rpcallowip=127.0.0.1" >> $CONF_DIR/$CONF_FILE
-	echo "listen=1" >> $CONF_DIR/$CONF_FILE
-	echo "server=1" >> $CONF_DIR/$CONF_FILE
-	echo "daemon=1" >> $CONF_DIR/$CONF_FILE
-	echo "logtimestamps=1" >> $CONF_DIR/$CONF_FILE
-	echo "maxconnections=256" >> $CONF_DIR/$CONF_FILE
-	echo "masternode=1" >> $CONF_DIR/$CONF_FILE
+	echo "rpcallowip=127.0.0.1\n" >> $CONF_DIR/$CONF_FILE
+	echo "listen=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "server=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "daemon=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "logtimestamps=1\n" >> $CONF_DIR/$CONF_FILE
+	echo "maxconnections=256\n" >> $CONF_DIR/$CONF_FILE
+	echo "masternode=1\n" >> $CONF_DIR/$CONF_FILE
 	echo "" >> $CONF_DIR/$CONF_FILE
 	echo "" >> $CONF_DIR/$CONF_FILE
-	echo "port=$PORT" >> $CONF_DIR/$CONF_FILE
-	echo "masternodeaddr=$DIP:$PORT" >> $CONF_DIR/$CONF_FILE
-	echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
+	echo "port=$PORT\n" >> $CONF_DIR/$CONF_FILE
+	echo "masternodeaddr=$DIP:$PORT\n" >> $CONF_DIR/$CONF_FILE
+	echo "masternodeprivkey=$PRIVKEY\n" >> $CONF_DIR/$CONF_FILE
 	./desired -daemon
 	echo "if server start failure try ./desired -reindex"
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
