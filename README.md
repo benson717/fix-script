@@ -10,6 +10,8 @@ To run the script simply type the following commands into your VPS terminal.
 
 - tar -xvzf Desire_MN_install_script_v.1.0.0.tar.gz
 
+- chmod 755 Desire_Setup.sh
+
 - ./Desire_Setup.sh
 
 <h1> Masternode Basic Requierments </h1>
