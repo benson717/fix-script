@@ -6,7 +6,7 @@
 
 To run the script simply type the following commands into your VPS terminal. 
  
-- wget https://github.com/
+- wget https://github.com/lazyboozer/masternode_script/archive/Desire_MN_install_script_v.1.0.0.tar.gz
 
 - chmod 755 Desire_Setup.sh
 
